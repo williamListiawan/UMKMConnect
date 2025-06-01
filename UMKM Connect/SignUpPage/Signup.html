@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - UMKM Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Moving Bubbles Background -->
+        <div class="bubble-container">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
+        <!-- Background decorative elements -->
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+        <div class="bg-circle circle-4"></div>
+
+        <!-- Left side - Branding -->
+        <div class="left-section">
+            <div class="brand-content">
+                <div class="logo">
+                    <span class="logo-umkm">UMKM</span><span class="logo-connect">Connect</span>
+                </div>
+                <h1 class="welcome-title">Bergabung dengan Kami!</h1>
+                <p class="welcome-description">
+                    Mulai perjalanan Anda menghubungkan UMKM dengan talenta lokal terbaik
+                </p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="checkmark">✓</div>
+                        <span>Akses ke ribuan lowongan kerja</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="checkmark">✓</div>
+                        <span>Platform yang mudah digunakan</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="checkmark">✓</div>
+                        <span>Dukungan 24/7 untuk pengguna</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="checkmark">✓</div>
+                        <span>Gratis untuk pencari kerja dan pembuat lowongan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Signup Form -->
+        <div class="right-section">
+            <div class="signup-card">
+                <!-- User Type Toggle -->
+                <div class="user-type-toggle">
+                    <button class="toggle-btn active" data-type="job-seeker">
+                        <div class="toggle-title">Pencari Kerja</div>
+                        <div class="toggle-subtitle">Saya mencari pekerjaan</div>
+                    </button>
+                    <button class="toggle-btn" data-type="company">
+                        <div class="toggle-title">Perusahaan</div>
+                        <div class="toggle-subtitle">Saya ingin merekrut</div>
+                    </button>
+                </div>
+                
+                <form class="signup-form" id="signupForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">Nama Depan</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                class="form-input" 
+                                placeholder="Masukkan nama depan anda"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Nama Belakang</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                class="form-input" 
+                                placeholder="Masukkan nama belakang anda"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="Masukkan alamat email anda"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Nomor Telepon</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="+62"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="form-label">Kota</label>
+                            <input 
+                                type="text" 
+                                id="city" 
+                                name="city" 
+                                class="form-input" 
+                                placeholder="Pilih kota"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password" class="form-label">Kata sandi</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Buat kata sandi"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Konfirmasi kata sandi</label>
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                class="form-input" 
+                                placeholder="Konfirmasi kata sandi"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <button type="submit" class="signup-btn">Daftar sekarang</button>
+                </form>
+
+                <p class="login-link">
+                    Sudah punya akun? <a href="../login/login.html" class="login-link-text">Masuk di sini</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="navigation">
+            <a href="/LandingPage/Landing.html" class="nav-btn nav-prev">← Kembali ke Beranda</a>
+            <a href="/LoginPage/Login.html" class="nav-btn nav-next">Login →</a>
+        </div>
+    </div>
+
+    <script src="Signup.js"></script>
+</body>
+</html>

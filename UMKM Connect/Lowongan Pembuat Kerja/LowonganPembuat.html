@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Lowongan Pekerjaan - UMKM Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LowonganPembuat.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-umkm">UMKM</span><span class="brand-connect">Connect</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="/DashboardPagePembuatLowongan/DashboardPembuat.html" class="nav-link">Home</a>
+                <a href="/Lowongan Pembuat Kerja/LowonganPembuat.html" class="nav-link active">Lowongan</a>
+                <a href="/Profile Page Pembuat Kerja/ProfilePembuat.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span class="user-name">Nasi Hitam</span>
+                    <span class="user-role">Pembuat Lowongan</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" id="userAvatar">
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Management Banner -->
+            <section class="management-banner">
+                <h1 class="banner-title">Kelola Lowongan Pekerjaan</h1>
+                <p class="banner-subtitle">Buat, edit, dan pantau lowongan pekerjaan untuk perusahaan Anda</p>
+                <button class="btn-create-job" id="createJobBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Buat Lowongan Baru
+                </button>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section">
+                <h2 class="section-title">Ringkasan Lowongan</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon total">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Total Lowongan</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Aktif</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon applications">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 21V19C23 18.1645 22.7361 17.3541 22.2447 16.6944C21.7533 16.0348 21.0609 15.5647 20.2745 15.3499" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 3.13C16.8604 3.35031 17.5508 3.81794 18.0422 4.47615C18.5336 5.13437 18.7975 5.94404 18.7975 6.775C18.7975 7.60596 18.5336 8.41563 18.0422 9.07385C17.5508 9.73206 16.8604 10.1997 16 10.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="247">0</div>
+                            <div class="stat-label">Total Lamaran</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon new">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="89">0</div>
+                            <div class="stat-label">Lamaran Baru</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Job Listings Management -->
+                <section class="jobs-management">
+                    <div class="section-header">
+                        <h2 class="section-title">Menampilkan lowongan yang telah dibuat</h2>
+                        <div class="section-actions">
+                            <select id="filterStatus" class="filter-select">
+                                <option value="all">Semua Status</option>
+                                <option value="active">Aktif</option>
+                                <option value="inactive">Nonaktif</option>
+                                <option value="draft">Draft</option>
+                            </select>
+                            <button class="btn-refresh" id="refreshBtn" title="Refresh">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23 4V10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20.49 15C19.9828 16.4922 19.1209 17.8144 17.9845 18.8493C16.8482 19.8842 15.4745 20.5931 14.0003 20.9097C12.5261 21.2263 10.9965 21.1394 9.56707 20.6584C8.13759 20.1774 6.84613 19.3214 5.82208 18.1716C4.79804 17.0217 4.078 15.6168 3.73463 14.1006C3.39126 12.5844 3.43813 11.0103 3.87058 9.51617C4.30303 8.02205 5.10735 6.66491 6.20156 5.56932C7.29578 4.47373 8.63863 3.67804 10.12 3.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23 4L12 15L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="jobs-list" id="jobsList">
+                        <!-- Job Card 1 - Cleaning Service -->
+                        <div class="job-management-card inactive" data-job-id="1">
+                            <div class="job-header">
+                                <h3 class="job-title">Cleaning Service</h3>
+                                <div class="job-status inactive">Nonaktif</div>
+                            </div>
+                            
+                            <div class="job-details-grid">
+                                <div class="job-detail">
+                                    <span class="detail-label">Dibuat:</span>
+                                    <span class="detail-value">-</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Berakhir:</span>
+                                    <span class="detail-value">-</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Gaji:</span>
+                                    <span class="detail-value">Rp2.750.000</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Lokasi:</span>
+                                    <span class="detail-value">Jakarta</span>
+                                </div>
+                            </div>
+                            
+                            <div class="job-actions">
+                                <button class="action-btn edit" data-action="edit" title="Edit">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Edit
+                                </button>
+                                <button class="action-btn publish" data-action="publish" title="Publikasi">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Publikasi
+                                </button>
+                                <button class="action-btn delete" data-action="delete" title="Hapus">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Hapus
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 2 - Waiters -->
+                        <div class="job-management-card active" data-job-id="2">
+                            <div class="job-header">
+                                <h3 class="job-title">Waiters</h3>
+                                <div class="job-status active">Aktif</div>
+                            </div>
+                            
+                            <div class="job-details-grid">
+                                <div class="job-detail">
+                                    <span class="detail-label">Dibuat:</span>
+                                    <span class="detail-value">12 hari yang lalu</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Berakhir:</span>
+                                    <span class="detail-value">30 hari lagi</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Gaji:</span>
+                                    <span class="detail-value">Rp2.750.000</span>
+                                </div>
+                                <div class="job-detail">
+                                    <span class="detail-label">Lokasi:</span>
+                                    <span class="detail-value">Jakarta</span>
+                                </div>
+                            </div>
+                            
+                            <div class="job-actions">
+                                <button class="action-btn edit" data-action="edit" title="Edit">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Edit
+                                </button>
+                                <button class="action-btn applications" data-action="applications" title="Lihat Lamaran">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Lihat Lamaran
+                                </button>
+                                <button class="action-btn delete" data-action="delete" title="Hapus">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Hapus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity Sidebar -->
+                <aside class="activity-sidebar">
+                    <section class="activity-section">
+                        <h3 class="sidebar-title">Aktivitas Terbaru</h3>
+                        <div class="activity-list" id="activityList">
+                            <div class="activity-item new-application">
+                                <div class="activity-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M20 8V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23 11H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="activity-info">
+                                    <div class="activity-title">Lamaran Baru</div>
+                                    <div class="activity-description">Chilly Willy, melamar Kasir</div>
+                                    <div class="activity-time">2 menit yang lalu</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item job-published">
+                                <div class="activity-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="activity-info">
+                                    <div class="activity-title">Lowongan Dipublikasi</div>
+                                    <div class="activity-description">Waiters telah aktif</div>
+                                    <div class="activity-time">1 jam yang lalu</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item candidate-invited">
+                                <div class="activity-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="activity-info">
+                                    <div class="activity-title">Kandidat Diundang</div>
+                                    <div class="activity-description">3 kandidat diundang untuk interview</div>
+                                    <div class="activity-time">3 jam yang lalu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Job Modal -->
+    <div class="modal-overlay" id="createJobModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Buat Lowongan Baru</h3>
+                <button class="modal-close" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="job-form" id="jobForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="jobTitle">Judul Lowongan</label>
+                        <input type="text" id="jobTitle" name="jobTitle" required placeholder="Contoh: Kasir">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobLocation">Lokasi</label>
+                        <input type="text" id="jobLocation" name="jobLocation" required placeholder="Contoh: Jakarta">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobSalary">Gaji</label>
+                        <input type="text" id="jobSalary" name="jobSalary" required placeholder="Contoh: Rp2.500.000">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobType">Jenis Pekerjaan</label>
+                        <select id="jobType" name="jobType" required>
+                            <option value="">Pilih jenis pekerjaan</option>
+                            <option value="full-time">Full Time</option>
+                            <option value="part-time">Part Time</option>
+                            <option value="freelance">Freelance</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="jobDescription">Deskripsi Pekerjaan</label>
+                    <textarea id="jobDescription" name="jobDescription" rows="4" required placeholder="Jelaskan detail pekerjaan, kualifikasi, dan persyaratan..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Batal</button>
+                    <button type="submit" class="btn-save">Simpan Lowongan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="LowonganPembuat.js"></script>
+</body>
+</html>

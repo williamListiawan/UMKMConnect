@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKMConnect Dashboard</title>
+    <link rel="stylesheet" href="ProfilePembuat.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="umkm">UMKM</span><span class="connect">Connect</span>
+        </div>
+        <nav class="nav">
+            <a href="/DashboardPagePembuatLowongan/DashboardPembuat.html" class="nav-link">Home</a>
+            <a href="/Lowongan Pembuat Kerja/LowonganPembuat.html" class="nav-link">Lowongan</a>
+            <a href="/Profile Page Pembuat Kerja/ProfilePembuat.html" class="nav-link active">Profile</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-info">
+                <div class="user-name">Nasi Hitam</div>
+                <div class="user-role">Pembuat Lowongan</div>
+            </div>
+            <div class="user-avatar">    </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <div class="profile-avatar">NC</div>
+                <h2 class="profile-name">Nasi Cumi Hitam</h2>
+                <p class="profile-company">UMKM FNB</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Lamaran</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">39</div>
+                        <div class="stat-label">Pelamar</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Hired</div>
+                    </div>
+                </div>
+
+                
+                    
+                <a href="/Lowongan Pembuat Kerja/LowonganPembuat.html"><button class="manage-btn">Kelola Lowongan</button>
+
+                </a>
+            </div>
+
+            <!-- Services Card -->
+            <div class="services-card">
+                <div class="services-header">
+                    <h3 class="services-title">Layanan Perusahaan</h3>
+                    <button class="edit-btn">
+                        <span>✏️</span>
+                        Edit
+                    </button>
+                </div>
+                
+                <div class="service-tags">
+                    <div class="service-tag">
+                        <span>Kasir</span>
+                        <button class="remove-tag">×</button>
+                    </div>
+                    <div class="service-tag">
+                        <span>Juru masak</span>
+                        <button class="remove-tag">×</button>
+                    </div>
+                    <div class="service-tag">
+                        <span>Pramusaji</span>
+                        <button class="remove-tag">×</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content">
+            <!-- Company Information -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">Informasi Perusahaan</h2>
+                    <button class="save-btn">
+                        <span>💾</span>
+                        Simpan Perubahan
+                    </button>
+                </div>
+
+                <form class="company-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Nama Perusahaan</label>
+                            <input type="text" class="form-input" placeholder="Masukkan nama perusahaan">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Perusahaan</label>
+                            <input type="email" class="form-input" placeholder="Masukkan email perusahaan">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nomor Telepon</label>
+                            <input type="tel" class="form-input" placeholder="Masukkan nomor telepon">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Website</label>
+                            <input type="url" class="form-input" placeholder="Masukkan website">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Industri</label>
+                            <input type="text" class="form-input" placeholder="Masukkan industri">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Jumlah Karyawan</label>
+                            <input type="number" class="form-input" placeholder="Masukkan jumlah karyawan">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Deskripsi Perusahaan</label>
+                            <textarea class="form-textarea" placeholder="Nasi Cumi Hitam Pak Kris hadalah usaha mikro, kecil, dan menengah (UMKM) yang bergerak di sektor kuliner, khususnya dalam penyediaan produk makanan dan/atau minuman berkualitas dengan cita rasa lokal maupun kekinian. Kami berkomitmen untuk menghadirkan pengalaman kuliner yang lezat, higienis, dan terjangkau bagi masyarakat luas."></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">Lowongan Kerja</h2>
+                    <button class="edit-btn">
+                        <span>✏️</span>
+                        Edit
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Juru Masak</h3>
+                            <p class="job-status">Aktif</p>
+                        </div>
+                        <div class="job-period">Jan 2022 - 2024</div>
+                    </div>
+
+                    <div class="job-details">
+                        <div class="job-detail">
+                            <div class="job-icon location-icon"></div>
+                            <span>Jakarta</span>
+                        </div>
+                        <div class="job-detail">
+                            <div class="job-icon time-icon"></div>
+                            <span>Part Time</span>
+                        </div>
+                        <div class="job-detail">
+                            <div class="job-icon education-icon"></div>
+                            <span>SMK/Sederajat</span>
+                        </div>
+                    </div>
+
+                    <div class="job-footer">
+                        <p class="job-description">Kami mencari seorang juru masak yang handal untuk bergabung bersama kami</p>
+                        <div class="job-salary">Rp700.000 – Rp1.200.000</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="ProfilePembuat.js"></script>
+</body>
+</html>

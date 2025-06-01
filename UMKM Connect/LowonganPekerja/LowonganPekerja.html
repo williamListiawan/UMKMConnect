@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Lowongan Pekerjaan - UMKM Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/LowonganPekerja/LowonganPekerja.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-umkm">UMKM</span><span class="brand-connect">Connect</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="/DashboardPagePembuatLowongan/DashboardPembuat.html" class="nav-link">Home</a>
+                <a href="/Lowongan Pembuat Kerja/LowonganPembuat.html" class="nav-link active">Lowongan</a>
+                <a href="/ProfilePagePencariKerja/ProfilePekerja.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span class="user-name">Chilly Willy</span>
+                    <span class="user-role">Pencari Kerja</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" id="userAvatar">
+                </div>
+               
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <h1 class="search-title">Cari Lowongan Pekerjaan</h1>
+                <form class="search-form" id="searchForm">
+                    <div class="search-grid">
+                        <div class="search-field">
+                            <label for="position">Posisi/Kata Kunci</label>
+                            <input type="text" id="position" name="position" placeholder="Contoh: Kasir" class="search-input">
+                        </div>
+                        <div class="search-field">
+                            <label for="location">Lokasi</label>
+                            <input type="text" id="location" name="location" placeholder="Pilih lokasi" class="search-input">
+                        </div>
+                        <div class="search-field">
+                            <label for="salary">Gaji</label>
+                            <select id="salary" name="salary" class="search-input">
+                                <option value="">Pilih rentang gaji</option>
+                                <option value="0-1000000">Dibawah Rp1.000.000</option>
+                                <option value="1000000-2000000">Rp1.000.000 - Rp2.000.000</option>
+                                <option value="2000000-3000000">Rp2.000.000 - Rp3.000.000</option>
+                                <option value="3000000-5000000">Rp3.000.000 - Rp5.000.000</option>
+                                <option value="5000000+">Diatas Rp5.000.000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Cari
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Advanced Filters -->
+                <div class="advanced-filters" id="advancedFilters">
+                    <button class="toggle-filters" id="toggleFilters">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Filter Lanjutan
+                    </button>
+                    <div class="filters-content" id="filtersContent">
+                        <div class="filter-group">
+                            <label>Jenis Pekerjaan</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="jobType" value="full-time">
+                                    <span>Full Time</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="jobType" value="part-time">
+                                    <span>Part Time</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="jobType" value="freelance">
+                                    <span>Freelance</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label>Pendidikan</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="education" value="sma">
+                                    <span>SMA/Sederajat</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="education" value="diploma">
+                                    <span>Diploma</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="education" value="sarjana">
+                                    <span>Sarjana</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Job Listings -->
+                <section class="jobs-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Lowongan Aktif</h2>
+                        <div class="sort-options">
+                            <select id="sortBy" class="sort-select">
+                                <option value="newest">Terbaru</option>
+                                <option value="salary-high">Gaji Tertinggi</option>
+                                <option value="salary-low">Gaji Terendah</option>
+                                <option value="relevance">Relevansi</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="jobs-list" id="jobsList">
+                        <!-- Job Card 1 -->
+                        <div class="job-card featured" data-job-id="1">
+                            <div class="job-header">
+                                <div class="job-badge">Admin</div>
+                                <button class="bookmark-btn" data-saved="false" title="Simpan lowongan">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h3 class="job-title">Warnetku</h3>
+                            <div class="job-details">
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Jakarta</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Part Time</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10M22 10L18 14L16 12L12 16L8 12L6 14L2 10M22 10V18C22 18.5304 21.7893 19.0391 21.4142 19.4142C21.0391 19.7893 20.5304 20 20 20H4C3.46957 20 2.96086 19.7893 2.58579 19.4142C2.21071 19.0391 2 18.5304 2 18V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>SMA/Sederajat</span>
+                                </div>
+                            </div>
+                            <div class="job-salary">Rp700.000 - Rp1.200.000</div>
+                            <p class="job-description">Kami mencari seorang admin yang handal untuk bergabung bersama Warnetku</p>
+                            <button class="apply-btn" data-job-id="1">Lamar</button>
+                        </div>
+
+                        <!-- Job Card 2 -->
+                        <div class="job-card" data-job-id="2">
+                            <div class="job-header">
+                                <div class="job-badge">Kasir</div>
+                                <button class="bookmark-btn" data-saved="false" title="Simpan lowongan">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h3 class="job-title">Nasi Cumi Hitam Pak Kris</h3>
+                            <div class="job-details">
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Jakarta</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Full Time</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10M22 10L18 14L16 12L12 16L8 12L6 14L2 10M22 10V18C22 18.5304 21.7893 19.0391 21.4142 19.4142C21.0391 19.7893 20.5304 20 20 20H4C3.46957 20 2.96086 19.7893 2.58579 19.4142C2.21071 19.0391 2 18.5304 2 18V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>SMA/Sederajat</span>
+                                </div>
+                            </div>
+                            <div class="job-salary">Rp1.750.000</div>
+                            <p class="job-description">Kami mencari seorang kasir yang handal untuk dapat bergabung dalam Nasi Cumi Hitam Pak Kris.</p>
+                            <button class="apply-btn" data-job-id="2">Lamar</button>
+                        </div>
+
+                        <!-- Job Card 3 -->
+                        <div class="job-card" data-job-id="3">
+                            <div class="job-header">
+                                <div class="job-badge">Waiters</div>
+                                <button class="bookmark-btn" data-saved="false" title="Simpan lowongan">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h3 class="job-title">Bakso Tetelan Pak Djoe since 1890</h3>
+                            <div class="job-details">
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Yogyakarta</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Part Time</span>
+                                </div>
+                                <div class="job-detail">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10M22 10L18 14L16 12L12 16L8 12L6 14L2 10M22 10V18C22 18.5304 21.7893 19.0391 21.4142 19.4142C21.0391 19.7893 20.5304 20 20 20H4C3.46957 20 2.96086 19.7893 2.58579 19.4142C2.21071 19.0391 2 18.5304 2 18V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>SMA/Sederajat</span>
+                                </div>
+                            </div>
+                            <div class="job-salary">Rp400.000 - Rp1.000.000</div>
+                            <p class="job-description">Kami mencari seorang waiters yang handal untuk dapat bergabung dalam Bakso Tetelan Pak Djoe since 1890.</p>
+                            <button class="apply-btn" data-job-id="3">Lamar</button>
+                        </div>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more-section">
+                        <button class="load-more-btn" id="loadMoreBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Muat Lebih Banyak
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Recommendations -->
+                    <section class="recommendations-section">
+                        <h3 class="sidebar-title">Rekomendasi Untuk Anda</h3>
+                        <div class="recommendations-list">
+                            <div class="recommendation-item">
+                                <div class="company-avatar">K</div>
+                                <div class="recommendation-info">
+                                    <div class="recommendation-title">Kasir</div>
+                                    <div class="company-name">Nasi Cumi Hitam Pak Kris</div>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <div class="company-avatar">W</div>
+                                <div class="recommendation-info">
+                                    <div class="recommendation-title">Waiters</div>
+                                    <div class="company-name">Bakso Tetelan Pak Djoe since 1890</div>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <div class="company-avatar">W</div>
+                                <div class="recommendation-info">
+                                    <div class="recommendation-title">Waiters</div>
+                                    <div class="company-name">Warteg Buhari</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Job Search Tips -->
+                    <section class="tips-section">
+                        <h3 class="sidebar-title">Tips Pencarian kerja</h3>
+                        <div class="tips-list">
+                            <div class="tip-item">
+                                <h4 class="tip-title">Optimasi Profil</h4>
+                                <p class="tip-description">Lengkapi profil dan CV Anda untuk meningkatkan visibilitas.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h4 class="tip-title">Kata Kunci</h4>
+                                <p class="tip-description">Gunakan kata kunci yang relevan saat mencari lowongan.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h4 class="tip-title">Follow Up</h4>
+                                <p class="tip-description">Pantau status lamaran Anda secara berkala.</p>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="LowonganPekerja.js"></script>
+</body>
+</html>

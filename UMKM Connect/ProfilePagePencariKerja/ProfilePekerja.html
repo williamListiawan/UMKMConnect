@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Pencari Kerja - UMKM Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ProfilePekerja.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-umkm">UMKM</span><span class="brand-connect">Connect</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="/DashboardPage/DashboardPencari.html" class="nav-link">Home</a>
+                <a href="/LowonganPekerja/LowonganPekerja.html" class="nav-link">Lowongan</a>
+                <a href="/ProfilePagePencariKerja/ProfilePekerja.html" class="nav-link active">Profile</a>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span class="user-name">Chilly Willy</span>
+                    <span class="user-role">Pencari Kerja</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" id="userAvatar">
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Edit Profile
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Lowongan Tersimpan
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Riwayat Lamaran
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Keluar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar-large">
+                                <span class="avatar-initials">CW</span>
+                                <button class="avatar-edit-btn" title="Ubah foto profil">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 3H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h2 class="profile-name">Chilly Willy</h2>
+                            <p class="profile-role">Pencari Kerja</p>
+                        </div>
+
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="12">0</div>
+                                <div class="stat-label">Lamaran</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="3">0</div>
+                                <div class="stat-label">Interview</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="85">0</div>
+                                <div class="stat-label">Profile</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-completion">
+                            <div class="completion-header">
+                                <span>Kelengkapan Profile</span>
+                                <span class="completion-percentage">85%</span>
+                            </div>
+                            <div class="completion-bar">
+                                <div class="completion-fill" style="width: 85%"></div>
+                            </div>
+                            <p class="completion-tip">Lengkapi profile untuk meningkatkan peluang diterima kerja</p>
+                        </div>
+
+                        <button class="btn-download-cv" id="downloadCvBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 4.21071 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Download CV
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Main Profile Content -->
+                <div class="profile-content">
+                    <!-- Personal Information Section -->
+                    <section class="profile-section" id="personalInfoSection">
+                        <div class="section-header">
+                            <h3 class="section-title">Informasi Pribadi</h3>
+                            <button class="btn-edit" data-section="personal" id="editPersonalBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Edit
+                            </button>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Nama Lengkap</label>
+                                    <input type="text" id="fullName" value="Chilly Willy" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="email" value="chilly.willy@email.com" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nomor Telepon</label>
+                                    <input type="tel" id="phone" value="+62 812-3456-7890" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Lokasi</label>
+                                    <input type="text" id="location" value="Jakarta, Indonesia" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Tentang Saya</label>
+                                <textarea id="aboutMe" rows="4" readonly>Saya adalah seorang profesional muda yang berpengalaman dalam bidang kuliner dengan latar belakang pendidikan Tata Boga. Memiliki passion yang tinggi dalam memasak dan mengembangkan kreativitas dalam menciptakan hidangan yang lezat dan menarik. Saya memiliki kemampuan bekerja dalam tim, disiplin, dan selalu berusaha memberikan yang terbaik dalam setiap pekerjaan.</textarea>
+                            </div>
+                        </div>
+
+                        <div class="section-actions" style="display: none;">
+                            <button class="btn-cancel" data-section="personal">Batal</button>
+                            <button class="btn-save" data-section="personal">Simpan</button>
+                        </div>
+                    </section>
+
+                    <!-- Education Section -->
+                    <section class="profile-section" id="educationSection">
+                        <div class="section-header">
+                            <h3 class="section-title">Pendidikan</h3>
+                            <button class="btn-edit" data-section="education" id="editEducationBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Edit
+                            </button>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="education-list" id="educationList">
+                                <div class="education-item" data-education-id="1">
+                                    <div class="education-header">
+                                        <div class="education-degree">SMK</div>
+                                        <div class="education-period">Sep 2021 - Jun 2024</div>
+                                    </div>
+                                    <div class="education-school">SMKN 1 Depok</div>
+                                    <div class="education-major">Jurusan Tataboga</div>
+                                </div>
+
+                                <div class="education-item" data-education-id="2">
+                                    <div class="education-header">
+                                        <div class="education-degree">S1 Tataboga</div>
+                                        <div class="education-period">Sep 2024 - Sekarang</div>
+                                    </div>
+                                    <div class="education-school">SMKN 1 Depok</div>
+                                    <div class="education-major">Jurusan Tataboga</div>
+                                </div>
+                            </div>
+
+                            <button class="btn-add-item" id="addEducationBtn" style="display: none;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Tambah Pendidikan
+                            </button>
+                        </div>
+
+                        <div class="section-actions" style="display: none;">
+                            <button class="btn-cancel" data-section="education">Batal</button>
+                            <button class="btn-save" data-section="education">Simpan</button>
+                        </div>
+                    </section>
+
+                    <!-- Skills Section -->
+                    <section class="profile-section" id="skillsSection">
+                        <div class="section-header">
+                            <h3 class="section-title">Keahlian</h3>
+                            <button class="btn-edit" data-section="skills" id="editSkillsBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Edit
+                            </button>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="skills-list" id="skillsList">
+                                <div class="skill-tag" data-skill="Disiplin">
+                                    <span>Disiplin</span>
+                                    <button class="skill-remove" style="display: none;">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="skill-tag" data-skill="Pekerja keras">
+                                    <span>Pekerja keras</span>
+                                    <button class="skill-remove" style="display: none;">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="skill-tag" data-skill="Komunikatif">
+                                    <span>Komunikatif</span>
+                                    <button class="skill-remove" style="display: none;">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="skill-tag" data-skill="Manajemen Waktu">
+                                    <span>Manajemen Waktu</span>
+                                    <button class="skill-remove" style="display: none;">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="skill-input-container" style="display: none;">
+                                <input type="text" id="skillInput" placeholder="Tambah keahlian baru...">
+                                <button class="btn-add-skill" id="addSkillBtn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="section-actions" style="display: none;">
+                            <button class="btn-cancel" data-section="skills">Batal</button>
+                            <button class="btn-save" data-section="skills">Simpan</button>
+                        </div>
+                    </section>
+
+                    <!-- Work Experience Section -->
+                    <section class="profile-section" id="experienceSection">
+                        <div class="section-header">
+                            <h3 class="section-title">Pengalaman Kerja</h3>
+                            <button class="btn-edit" data-section="experience" id="editExperienceBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Edit
+                            </button>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="experience-list" id="experienceList">
+                                <div class="experience-item" data-experience-id="1">
+                                    <div class="experience-header">
+                                        <div class="experience-position">Juru Masak</div>
+                                        <div class="experience-period">Jan 2022 - 2024</div>
+                                    </div>
+                                    <div class="experience-company">Mie Yamin 88</div>
+                                    <div class="experience-description">
+                                        Merencanakan dan menyiapkan berbagai jenis hidangan sesuai dengan standar restoran. 
+                                        Mengelola bahan makanan, mulai dari persiapan hingga proses memasak. 
+                                        Menjaga kebersihan dapur dan mematuhi standar kebersihan serta keamanan makanan (food safety).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-add-item" id="addExperienceBtn" style="display: none;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Tambah Pengalaman
+                            </button>
+                        </div>
+
+                        <div class="section-actions" style="display: none;">
+                            <button class="btn-cancel" data-section="experience">Batal</button>
+                            <button class="btn-save" data-section="experience">Simpan</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Edit Section</h3>
+                <button class="modal-close" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="ProfilePekerja.js"></script>
+</body>
+</html>
